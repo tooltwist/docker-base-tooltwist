@@ -8,7 +8,7 @@
 <!--    http://www.qos.ch/shop/products/professionalSupport         -->
 <!--                                                                -->
 <configuration>
-  <appender name="A1" class="ch.qos.logback.core.ConsoleAppender">
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
       <pattern>%d %-5p %c{1} - %m%n</pattern>
     </encoder>
@@ -45,7 +45,7 @@
   <logger name="httpclient.wire" level="INFO"/>
   <logger name="org.apache.commons.httpclient" level="INFO"/>
   <root level="DEBUG">
-	<!-- Change this to CONSOLE, FILE, or ROLLING -->
-    <appender-ref ref="ROLLING"/>
+    <!-- Change this to CONSOLE, FILE, or ROLLING -->
+    <appender-ref ref="CONSOLE"/>
   </root>
 </configuration>
