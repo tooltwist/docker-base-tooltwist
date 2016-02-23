@@ -144,4 +144,5 @@ EXPOSE 8080
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-CMD [ "su", "tooltwist", "-c", ". .tooltwist_rc; cd server/tomcat/bin; ./startup.sh;" ]
+WORKDIR /home/tooltwist
+CMD [ "su", "tooltwist", "-c", ". .tooltwist_rc; cd server/tomcat/bin; ./startup.sh; tail -f ../logs/catalina.out; " ]
